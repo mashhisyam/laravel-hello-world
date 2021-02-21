@@ -2,8 +2,11 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Category;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\ProgramController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//PRAKTIKUM 1
 Route::get('/', function () {
     return view('welcome');
 });
@@ -32,10 +36,27 @@ Route::get('/about', function () {
 });
 
 Route::get('/articles/{id}', function ($id) {
-    echo "Halaman Artikel dengan ID ".$id;
+    echo "Halaman Artikel dengan ID " . $id;
 });
 
+//PRAKTIKUM 2
+Route::get('/', [HomeController::class, 'index']);
+Route::get('/about-us', [AboutController::class, 'about']);
+Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
-Route::get('/', [HomeController::class,'index']);
-Route::get('/about', [AboutController::class,'about']);
-Route::get('/articles/{id}',[ArticleController::class,'articles']);
+
+//PRAKTIKUM 3
+Route::get('/', [HomeController::class, 'index']);
+
+Route::group(['prefix' => 'category'], function () {
+    Route::get('/marbel-edu-games', [Category::class, 'products']);
+});
+
+Route::get('/news/{val}', [NewsController::class, 'value']);
+
+Route::group(['prefix' => 'program'], function () {
+    Route::get('/karir', [ProgramController::class, 'karir']);
+});
+
+Route::get('/about-us', [AboutController::class, 'about']);
+
