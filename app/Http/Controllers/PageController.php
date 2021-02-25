@@ -12,7 +12,7 @@ class PageController extends Controller
     }
     public function about()
     {
-        return 'NAMA : Hisyam Haryo Mahdyan<br>NIM : 1941720186';
+        return 'NAMA : Hisyam Haryo Mahdyaan <br>NIM : 1941720186';
     }
     public function articles($id)
     {
