@@ -65,6 +65,7 @@ Route::get('/about-us', [AboutController::class, 'about']);
 //PRAKTIKUM 4
 Route::get('/index', [WebController::class, 'index']);
 Route::get('/about', [WebController::class, 'about']);
+Route::get('/about', [WebController::class, 'about']);
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
