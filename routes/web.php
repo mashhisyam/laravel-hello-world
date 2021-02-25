@@ -60,3 +60,7 @@ Route::group(['prefix' => 'program'], function () {
 
 Route::get('/about-us', [AboutController::class, 'about']);
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
