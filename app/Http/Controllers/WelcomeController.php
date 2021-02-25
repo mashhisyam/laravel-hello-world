@@ -10,5 +10,8 @@ class WelcomeController extends Controller
     {
         return 'Hello World';
     }
+    public function index()
+    {
+        return view('index');
+    }
 }
-

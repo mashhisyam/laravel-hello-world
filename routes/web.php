@@ -7,6 +7,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -60,7 +61,8 @@ Route::group(['prefix' => 'program'], function () {
 
 Route::get('/about-us', [AboutController::class, 'about']);
 
+//PRAKTIKUM 4
+Route::get('/index', [WelcomeController::class, 'index']);
+// Auth::routes();
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
