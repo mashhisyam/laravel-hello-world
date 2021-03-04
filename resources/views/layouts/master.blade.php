@@ -28,6 +28,8 @@
     <link href="themes/assets/css/carousel.css" rel="stylesheet">
 </head>
 
+<body>
+
 <div class="navbar-wrapper">
     <div class="container">
 
@@ -99,7 +101,6 @@
 
     </div>
 </div>
-<body>
 @yield('body')
 </body>
 <footer>
