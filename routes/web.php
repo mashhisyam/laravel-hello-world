@@ -65,6 +65,7 @@ use Illuminate\Support\Facades\Route;
 //PRAKTIKUM 4
 Route::get('/', [WebController::class, 'index']);
 Route::get('/about', [WebController::class, 'about']);
+Route::get('/contact', [WebController::class, 'contact']);
 // Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
