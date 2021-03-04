@@ -43,13 +43,13 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="Route::view('/', 'index');">Bootstrap Restaurant</a>
+            <a class="navbar-brand" href="/">Bootstrap Restaurant</a>
           </div>
           <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="Route::view('/', 'index');">Home</a></li>
-              <li><a href="Route::view('/about', 'about');">About Us</a></li>
-              <li><a href="Route::view('/contact', 'contact');">Contact</a></li>
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/about">About Us</a></li>
+              <li><a href="/contact">Contact</a></li>
               <li><a href="#tablebooking">Table Booking</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Indina <b class="caret"></b></a>
