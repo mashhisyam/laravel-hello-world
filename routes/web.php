@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Category;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
@@ -22,7 +23,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+<<<<<<< HEAD
 //PRAKTIKUM 1
+=======
+// //PRAKTIKUM 1
+>>>>>>> b886961abc70c13a9c0447b67620daa3f79c86e6
 // Route::get('/', function () {
 //     return view('welcome');
 // });
@@ -62,9 +67,22 @@ use Illuminate\Support\Facades\Route;
 
 // Route::get('/about-us', [AboutController::class, 'about']);
 
+<<<<<<< HEAD
 // //PRAKTIKUM 4
 // Route::get('/index', [WebController::class, 'index']);
 // Route::get('/about', [WebController::class, 'about']);
 Auth::routes();
+=======
+//PRAKTIKUM 4
+// Route::get('/', [WebController::class, 'index']);
+// Route::get('/about', [WebController::class, 'about']);
+// Route::get('/contact', [WebController::class, 'contact']);
+Route::get('/login',  [LoginController::class, 'Login']);
+// Auth::routes();
+>>>>>>> b886961abc70c13a9c0447b67620daa3f79c86e6
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
