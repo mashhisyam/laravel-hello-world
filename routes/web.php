@@ -23,48 +23,48 @@ use Illuminate\Support\Facades\Route;
 */
 
 //PRAKTIKUM 1
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::get('/', function () {
-    echo "Selamat Datang";
-});
+// Route::get('/', function () {
+//     echo "Selamat Datang";
+// });
 
-Route::get('/about', function () {
-    echo "NIM   : 1941720186<br>";
-    echo "NAMA  : Hisyam Haryo Mahdyan<br>";
-    echo "KELAS : TI-2A<br>";
-});
+// Route::get('/about', function () {
+//     echo "NIM   : 1941720186<br>";
+//     echo "NAMA  : Hisyam Haryo Mahdyan<br>";
+//     echo "KELAS : TI-2A<br>";
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    echo "Halaman Artikel dengan ID " . $id;
-});
+// Route::get('/articles/{id}', function ($id) {
+//     echo "Halaman Artikel dengan ID " . $id;
+// });
 
-//PRAKTIKUM 2
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/about-us', [AboutController::class, 'about']);
-Route::get('/articles/{id}', [ArticleController::class, 'articles']);
+// //PRAKTIKUM 2
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/about-us', [AboutController::class, 'about']);
+// Route::get('/articles/{id}', [ArticleController::class, 'articles']);
 
 
-//PRAKTIKUM 3
-Route::get('/', [HomeController::class, 'index']);
+// //PRAKTIKUM 3
+// Route::get('/', [HomeController::class, 'index']);
 
-Route::group(['prefix' => 'category'], function () {
-    Route::get('/marbel-edu-games', [Category::class, 'products']);
-});
+// Route::group(['prefix' => 'category'], function () {
+//     Route::get('/marbel-edu-games', [Category::class, 'products']);
+// });
 
-Route::get('/news/{val}', [NewsController::class, 'value']);
+// Route::get('/news/{val}', [NewsController::class, 'value']);
 
-Route::group(['prefix' => 'program'], function () {
-    Route::get('/karir', [ProgramController::class, 'karir']);
-});
+// Route::group(['prefix' => 'program'], function () {
+//     Route::get('/karir', [ProgramController::class, 'karir']);
+// });
 
-Route::get('/about-us', [AboutController::class, 'about']);
+// Route::get('/about-us', [AboutController::class, 'about']);
 
-//PRAKTIKUM 4
-Route::get('/index', [WebController::class, 'index']);
-Route::get('/about', [WebController::class, 'about']);
-// Auth::routes();
+// //PRAKTIKUM 4
+// Route::get('/index', [WebController::class, 'index']);
+// Route::get('/about', [WebController::class, 'about']);
+Auth::routes();
 
 // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
