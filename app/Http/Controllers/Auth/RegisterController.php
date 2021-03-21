@@ -72,4 +72,9 @@ class RegisterController extends Controller
             'password' => Hash::make($data['password']),
         ]);
     }
+//     public function index()
+//     {
+//         $user = Auth::user();
+//         return view('home', ['user' => $user]);
+//     }
 }

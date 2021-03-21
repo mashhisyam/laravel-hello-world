@@ -1,8 +1,11 @@
 <?php
 
-namespace Database\Seeders;
 
+namespace Database\Seeders;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
+
 
 class UserBaruSeeder extends Seeder
 {
