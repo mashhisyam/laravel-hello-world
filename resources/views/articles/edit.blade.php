@@ -1,7 +1,8 @@
-@extends('layout.app')
+@extends('layouts.app')
 @section('content')
 <div class="container">
     <form action="/articles/{{$article->id}}" method="POST" enctype="multipart/form-data">
+        @method('PUT')
         @csrf
         <div class="form-group">
             <label for="title">Judul</label>
@@ -14,7 +15,7 @@
 
         </div>
         <div class="form-group">
-            <label for="image">Featured Image</label>
+            <label for="image">Feature Image</label>
             <input type="file" class="form-control" require="required" name="image" value="{{$article->feature_image}}"><br>
             <img width="150px" src="{{asset('storage/'.$article->featured_image)}}">
 
