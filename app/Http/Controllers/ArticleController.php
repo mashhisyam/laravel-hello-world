@@ -68,7 +68,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function edit(Article $article, $id)
+    public function edit($id)
     {
         $article = Article::find($id);
         return view('articles.edit', ['article' => $article]);
@@ -81,7 +81,7 @@ class ArticleController extends Controller
      * @param  \App\Models\Article  $article
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Article $article, $id)
+    public function update(Request $request, $id)
     {
         $article = Article::find($id);
 
@@ -95,7 +95,7 @@ class ArticleController extends Controller
         $article->featured_image = $image_name;
 
         $article->save();
-        return redirect()->route('article.index')
+        return redirect()->route('articles.index')
             ->with('success', 'Artikel Berhasil Diupdate');
     }
 
