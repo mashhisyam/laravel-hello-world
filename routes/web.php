@@ -74,3 +74,4 @@ Auth::routes();
 
 Route::resource('/articles', ArticleController::class);
 Route::post('/articles/{id}/edit', 'ArticleController@store')->name('Articles.store');
+Route::get('/article/cetak_pdf', [ArticleController::class, 'cetak_pdf'])->name('cetak_pdf');
